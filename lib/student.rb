@@ -49,10 +49,10 @@ end
   
   
  def self.new_from_db(row)
-    new_student = self.new
-    new_student.id = row[0]
-    new_student.name =  row[1]
-    new_student.grade = row[2]
+    id = row[0]
+    name = row[1]
+    grade = row[2]
+    self.new(id, name, grade)
     new_student  # return the newly created instance
   end
 
